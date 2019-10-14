@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLoveIts > 0 ,
+                'list-group-item-danger': postLoveIts < 0 }">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-9"><h3>{{postName}}</h3></div> 
+		<div class="col-sm-3">{{postDate | date : 'short'}}</div>
+	</div>
+	
+
+	
+	<div >{{postContent}}</div > <br>
+	<div >
+		<button class="btn btn-success" (click)="onLove()">love it </button>		
+		<button class="btn btn-danger" (click)="onDont()">don't love it</button>
+	</div>
+</div>
+</li>
+
